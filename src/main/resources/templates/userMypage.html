@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패스오더</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="/static/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/userMypage.css" />
+</head>
+
+<body>
+    <div id="container">
+        <header class="header-container">
+            
+        </header>
+    
+        
+        <main class="main-container">
+            <div class="sub-img-area">
+                <div class="main-title-container">
+                    <span>My Member's Status, 고객 마이페이지</span>
+                    <h1>고객님의 패스오더 멤버스 서비스 이용현황입니다.</h1>
+                </div>
+            </div>
+
+
+            <!----------여기서부터 html 추가하시면 됩니다.------------------------->
+            <div class="user-mypage">
+                <div class="user-mypage-ui-group">
+                    <div class="user-status-title">
+                        <p>패스오더 서비스 이용 현황</p>
+                    </div>
+                    <div class="user-button-group">
+                        <button type="button" class="coupon-button">보유 쿠폰</button>
+                        <button type="button" class="purchase-dtl-button">구매 내역</button>
+                    </div>
+                </div>
+                <div class="user-mypage-container">
+                    <div class="user-status-box">
+                        <div class="user-status-contents">
+                            <div class="user-rank-area">
+                                <div class="user-rank-box">
+                                    <div class="user-rank-icon">
+                                        <i class="fa-solid fa-medal"></i>
+                                    </div>
+                                    <div class="rank-text-box">
+                                        <div class="rank-text-first">
+                                            <span class="rank-username">박창우</span>
+                                            <p class="rank-first-p">회원님의 랭크는</p>
+                                        </div>
+                                        <div class="rank-text-second">
+                                            <span class="rank-rankname">Diamond</span>
+                                            <p class="rank-second-p">입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user-profile-box">
+                                    <div class="user-profile-text">
+                                        <div class="user-profile-div">
+                                            <p class="user-profile-p">이메일:</p>
+                                            <span>rorndksk123@naver.com</span>
+                                        </div>
+
+                                        <div class="user-profile-div">
+                                            <p class="user-profile-p">아이디:</p>
+                                            <span>rorndksk123</span>
+                                        </div>
+                                        
+                                        <div class="user-profile-div">
+                                            <p class="user-profile-p">이름:</p>
+                                            <span>박창우</span>
+                                        </div>
+                                    </div>
+                                    <div class="user-profile-button">
+                                        <button type="button" class="user-modify-button">회원정보 수정</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="user-coupon-area">
+                                <div class="coupon-box">
+                                    <i class="fa-solid fa-stamp"></i>
+                                    <div class="coupon-contents">
+                                        <div class="coupon-div">
+                                            <p class="coupon-div-p">쿠폰 현황</p>
+                                            <div class="coupon-count">
+                                                <span>0</span>
+                                                <p>/10</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-box">
+                                    <i class="fa-solid fa-mug-hot"></i>
+                                    <div class="coupon-contents">
+                                        <div class="ticket-div">
+                                            <p>티켓 현황</p>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-coupon-box">
+                        <div class="coupon-circle-area">
+                            <i class="fa-regular fa-circle-check"></i>
+                            <!-----음료 1 구매시 위의 아이콘으로 대체----->
+                            <i class="fa-regular fa-circle"></i>
+                            <i class="fa-regular fa-circle"></i>
+                            <i class="fa-regular fa-circle"></i>
+                            <i class="fa-regular fa-circle"></i>
+                            <i class="fa-regular fa-circle"></i>
+                            <i class="fa-regular fa-circle"></i>
+                            <i class="fa-regular fa-circle"></i>
+                            <i class="fa-regular fa-circle"></i>
+                            <i class="fa-regular fa-circle"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/static/js/component/header.js"></script>
+    <script src="/static/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,503 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.sub-img-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    
+    background-image: url(/static/images/userMypage2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 600px;
+}
+
+.main-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 50px;
+}
+  
+.main-title-container span {
+    color: #ffffff;
+    font-size: 20px;
+
+    padding-bottom: 10px;
+}
+  
+.main-title-container h1 {
+    margin-top: 10px;
+  
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.user-mypage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 800px;
+
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+.user-mypage-ui-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+}
+
+.user-status-title {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 1000px;
+    height: 100px;
+}
+
+.user-status-title p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 25px;
+    font-weight: 600;
+    color: #002f6c;
+
+    text-align: center;
+
+}
+
+.user-button-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    width: 800px;
+    height: 100px;
+
+    padding: 0 60px 0 60px;
+}
+
+.coupon-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 45px;
+
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    background-color: #002f6c;
+    border: 1px solid black;
+}
+
+.purchase-dtl-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 45px;
+
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    background-color: #002f6c;
+    border: 1px solid black;
+}
+
+.coupon-button:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 45px;
+
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    background-color: #000000;
+    border: 1px solid black;
+}
+
+.purchase-dtl-button:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 45px;
+
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    background-color: #000000;
+    border: 1px solid black;
+}
+
+.user-mypage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 600px;
+
+}
+
+.user-status-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 600px;
+
+    background-color: #ebebeb;
+}
+
+.user-status-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 950px;
+    height: 550px;
+}
+
+.user-rank-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 500px;
+    height: 550px;
+}
+
+.user-rank-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 500px;
+    height: 275px;
+}
+
+.user-rank-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 275px;
+}
+
+.fa-medal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+
+    color: #002f6c;
+}
+
+.rank-text-box {
+    display: flex;
+    flex-direction: column;
+
+    width: 300px;
+    height: 275px;
+
+    line-height: 50px;
+}
+
+.rank-text-box span {
+    padding-right: 15px;
+}
+
+.rank-text-box p {
+    font-size: 22px;
+}
+
+.rank-text-first {
+    display: flex;
+    align-items: flex-end;
+
+    height: 50%;
+}
+
+.rank-text-second {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 50%;
+}
+
+.rank-first-p {
+    display: flex;
+    align-items: flex-end;
+
+    height: 50%;
+}
+
+.rank-second-p {
+    padding-top: 11px;
+}
+
+.rank-username {
+    font-size: 35px;
+    font-weight: 600;
+
+    color: #002f6c;
+
+    padding-bottom: 11px;
+}
+
+.rank-rankname {
+    font-size: 40px;
+    font-weight: 600;
+
+    color: #777777;
+}
+
+.user-profile-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 500px;
+    height: 275px;
+}
+
+.user-profile-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 100%;
+    height: 200px;
+}
+
+.user-profile-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 60px;
+}
+
+.user-profile-p {
+    width: 120px;
+    padding: 0 0px 0 50px;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: #002f6c;
+}
+
+.user-profile-div span {
+    width: 380px;
+    font-size: 18px;
+}
+
+
+.user-profile-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 75px;
+}
+
+.user-modify-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 45px;
+
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    background-color: #002f6c;
+    border: 1px solid black;
+}
+
+.user-coupon-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 500px;
+    height: 550px;
+}
+
+.coupon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 450px;
+    height: 50%;
+}
+
+.fa-stamp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+
+    color: #002f6c;
+    
+    width: 200px;
+    height: 275px;
+}
+
+.coupon-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+}
+
+.coupon-div {
+    text-align: center;
+}
+
+.coupon-div-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+    font-weight: 600;
+    height: 50px;
+}
+
+.coupon-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coupon-count span {
+    font-size: 50px;
+    color:rgb(47, 96, 255);
+
+    font-weight: 600;
+}
+
+.coupon-count p {
+    font-size: 25px;
+    padding-left: 5px;
+    padding-top: 18px;
+}
+
+.ticket-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 450px;
+    height: 50%;
+}
+
+.fa-mug-hot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+
+    color: #002f6c;
+    
+    width: 200px;
+    height: 275px;
+}
+
+.ticket-div {
+    text-align: center;
+}
+
+.ticket-div p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+    font-weight: 600;
+    height: 50px;
+}
+
+.ticket-div span {
+    font-size: 50px;
+    color:rgb(47, 96, 255);
+
+    font-weight: 600;
+}
+
+.user-coupon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 600px;
+
+    border: 1px solid #ebebeb;
+
+    background-color: white;
+}
+
+.coupon-circle-area {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 750px;
+    height: 550px;
+}
+
+.fa-circle-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 150px;
+    height: 275px;
+
+    color: rgb(47, 96, 255);
+
+    font-size: 100px;
+}
+
+.fa-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 150px;
+    height: 275px;
+
+    color: #002f6c;
+
+    font-size: 100px;
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.korit.passorder.respository.AccountRepository">
+    <resultMap id="userMst" type="com.korit.passorder.entity.UserMst">
+        <result property="userId" column="user_id"></result>
+        <result property="username" column="username"></result>
+        <result property="name" column="name"></result>
+        <result property="password" column="password"></result>
+        <result property="email" column="email"></result>
+        <result property="roleId" column="role_id"></result>
+        <collection property="roleMst" resultMap="roleMst"></collection>
+    </resultMap>
+
+    <resultMap id="roleMst" type="com.korit.passorder.entity.RoleMst">
+        <result property="roleId" column="role_id"></result>
+        <result property="roleName" column="role_name"></result>
+    </resultMap>
+
+    <select id="findUserByUsername" parameterType="String" resultMap="userMst">
+        select
+            um.user_id,
+            um.username,
+            um.name,
+            um.password,
+            um.email,
+            um.role_id,
+
+            rm.role_id,
+            rm.role_name
+
+        from
+            userMst um
+            left outer join roleMst rm on(rm.role_id = um.role_id)
+
+        where
+            um.username = #{username}
+    </select>
+
+    <insert id="saveUser"
+            parameterType="com.korit.passorder.entity.UserMst"
+            useGeneratedKeys ="true"
+            keyProperty="userId">
+        insert into userMst
+        values (0, #{username}, #{name}, #{password}, #{email}, #{roleId})
+
+    </insert>
+</mapper>

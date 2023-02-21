@@ -1,3 +1,8 @@
+window.onload = () => {
+  HeaderService.getInstance().loadHeader();
+}
+
+
 class HeaderService {
   static #instance = null;
   static getInstance() {
@@ -19,7 +24,7 @@ class HeaderService {
                 </button>
             </div>
             <div class="logo-container">
-                <h1 class="brand-logo"><a href="">PASSORDER</a></h1>
+                <h1 class="brand-logo"><a href="/index">PASSORDER</a></h1>
             </div>
             <ul class="menu-container">
                 <li><a href="">카페메뉴</a></li>
