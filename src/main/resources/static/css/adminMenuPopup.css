@@ -1,0 +1,134 @@
+
+.popup-wrap{
+    background-color:rgba(0,0,0,.3); 
+    justify-content:center;
+    align-items:center;   
+    position:fixed;       
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;             
+    display:none; 
+    /* display:flex; */
+    padding:15px; 
+  }
+  .popup{
+    border-radius:10px; 
+    overflow:hidden;     
+    background-color:white;
+    box-shadow: 5px 10px 10px 1px rgba(0,0,0,.3); 
+  }
+  .popup-head{
+    width:100%;
+    height:50px; 
+    padding: 10px 0px 10px;
+
+    display:flex; 
+    align-items:center;
+    justify-content:center;
+
+    background-color: #243c84;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  /* popupbody */
+  .popup-body{               
+    width:100%;
+    background-color:#ffffff;
+  }
+  .body-content{            
+    width:100%;
+    padding:30px;          
+  }
+  /* 내부 title */
+  .body-titlebox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width:100%;
+    height:40px;
+    margin-bottom:10px;
+
+    font-size: 12px;
+  }
+  .body-titlebox p {
+    padding-right: 10px;
+    font-size: 16px;
+    font-weight: 600;
+
+  }
+  .body-titlebox input{
+    font-size: 16px;
+  }
+  /* 내부 내용 */
+  .body-contentbox{        
+    display: flex;
+
+    word-break:break-word;   
+  }
+  .image-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .image-button-group{
+    display: flex;
+    justify-content: center;
+    }
+  .image-button-group button{
+    width: 110px;
+  }
+  .option-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  .option-container ul{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .option-container li{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: first baseline;
+    
+  }
+  .option-name{
+    font-weight: 600;
+  }
+  .option-content{
+    display: flex;
+    flex-direction: column;
+  }
+  .option-button-group{
+    display: flex;
+  }
+.option-button-group button{
+    width: 110px;
+}
+.option-price{
+    text-align: right;
+    margin-top: 5px;
+}
+
+/* foot button */
+  .popup-foot{   
+    width:100%;
+    height:50px;
+  }
+  .pop-btn{
+    display:inline-flex;
+    width:50%;  
+    height:100%; 
+    justify-content:center;
+    align-items:center; 
+    float:left;    
+    cursor:pointer;     
+  }
+  .pop-btn.save{ 
+    background-color: #243c84;
+    color: white;
+  }

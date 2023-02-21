@@ -1,0 +1,249 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.sub-img-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    
+    background-image: url(/images/main-image2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 600px;
+}
+
+.main-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 50px;
+}
+  
+.main-title-container span {
+    color: #ffffff;
+    font-size: 20px;
+
+    padding-bottom: 10px;
+}
+  
+.main-title-container h1 {
+    margin-top: 10px;
+  
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.mypage-admin {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+}
+
+.admin-ui-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    padding-top: 25px;
+}
+
+.admin-ui {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 600px;
+    height: 600px;
+
+    
+}
+
+.admin-button {
+    padding-right: 50px;
+}
+
+.admin-button:nth-child(2) {
+    padding-right: 0px;
+}
+
+.admin-button:nth-child(4) {
+    padding-right: 0px;
+}
+
+.admin-ui a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 250px;
+    height: 250px;
+    background-color: #002f6c;
+
+    font-weight: 600;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
+.admin-dtl-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 600px;
+    height: 600px;
+}
+
+.admin-dtl-box {
+    border: 1px solid #ebebeb;
+    width: 550px;
+    height: 550px;
+}
+
+.admin-dtl-box input {
+    border: none;
+    background: transparent;
+}
+
+.admin-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 600;
+    font-size: 35px;
+
+    padding-bottom: 60px;
+
+    padding-top: 20px;
+}
+
+.admin-dtl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding-bottom: 35px;
+}
+
+
+
+.admin-dtl label {
+    font-size: 20px;
+    font-weight: 600;
+    padding-right: 20px;
+    padding-left: 30px;
+}
+
+.admin-dtl input::placeholder {
+    color:#002f6c;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.admin-dtl input {
+    width: 350px;
+    height: 50px;
+}
+
+.welcome-dtl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 40px;
+}
+
+.welcome-dtl label {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.welcome-dtl input::placeholder {
+    color:#002f6c;
+    font-weight: 600;
+    font-size: 35px;
+    text-align: center;
+}
+
+.welcome-dtl input {
+    width: 100%;
+    height: 60px;
+}
+
+.store-dtl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding-bottom: 35px;
+}
+
+.store-dtl label {
+    font-size: 20px;
+    font-weight: 600;
+    padding-right: 20px;
+    padding-left: 30px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.store-dtl input::placeholder {
+    color:#002f6c;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.store-dtl input {
+    width: 350px;
+}
+
+.store-address-input {
+    padding-left: 22px;
+    width: 500px;
+    height: 60px;
+    word-wrap: break-word;
+}
+
+.admin-button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.logout-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 45px;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: #002f6c;
+    border: 1px solid black;
+}

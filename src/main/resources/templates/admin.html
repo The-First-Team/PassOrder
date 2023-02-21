@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패스오더</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/admin.css" />
+</head>
+
+<body>
+    <div id="container">
+        <header class="header-container">
+            
+        </header>
+    
+        
+        <main class="main-container">
+            <div class="sub-img-area">
+                <div class="main-title-container">
+                    <span>ALWAYS BESIDE YOU, 관리자 마이페이지</span>
+                    <h1>늘 당신 곁에, 패스오더는 항상 함께합니다.</h1>
+                </div>
+            </div>
+
+
+            <!----------여기서부터 html 추가하시면 됩니다.------------------------->
+            <div class="mypage-admin">
+                <div class="admin-ui-container">
+                    <div class="admin-ui">
+                        <div class="admin-button"><a href="">주문관리</a></div>
+                        <div class="admin-button"><a href="">메뉴관리</a></div>
+                        <div class="admin-button"><a href="">매출관리</a></div>
+                        <div class="admin-button"><a href="">관리자 / 매장<br>정보수정</a></div>
+                    </div>
+                    <div class="admin-dtl-container">
+                        <form action="" method="">
+                            <div class="admin-dtl-box">
+                                <h1 class="admin-title">관리자 매장 정보</h1>
+                                <div class="welcome-dtl">
+                                    <label for="admin-username"></label>
+                                    <input type="username" id="admin-username" class="welcome-input" name="username" placeholder="박창우 사장님 환영합니다." disabled requried>
+                                </div>
+                                <div class="admin-dtl">
+                                    <label for="admin-userid">이메일</label>
+                                    <input type="email" id="admin-userid" class="admin-dtl-input" name="email" placeholder="rorndksk123@naver.com" disabled requried>
+                                </div>
+                                <div class="store-dtl">
+                                    <label for="store-location-name">지점명</label>
+                                    <input type="text" id="store-location-name" class="store-dtl-input" name="text" placeholder="패스오더 부산대학교 정문점" disabled requried>
+                                </div>
+                                <div class="store-dtl">
+                                    <label for="store-address">주소</label>
+                                    <input type="text" id="store-address" class="store-dtl-input store-address-input" name="text" placeholder="부산광역시 금정구 부산대학로 63번길 2부산광역시 금정구 부산대학로 63번길 2" disabled requried>
+                                </div>
+                                <div class="admin-button-group">
+                                  <button type="submit" class="logout-submit">로그아웃</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/js/component/header.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

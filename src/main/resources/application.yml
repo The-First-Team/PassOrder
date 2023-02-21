@@ -6,11 +6,15 @@ spring:
     static-path-pattern: /static/**
     pathmatch:
       matching-strategy: ant_path_matcher
-    datasource:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://kyungmin.chnarsmmvhmz.ap-northeast-2.rds.amazonaws.com:3306/passorder
-      username: admin
-      password: 1q2w3e4r
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://kyungmin.chnarsmmvhmz.ap-northeast-2.rds.amazonaws.com:3306/passorder
+    username: admin
+    password: 1q2w3e4r
+  security:
+    user:
+      name: test@test.com
+      password: 1234
 
 mybatis:
   mapper-locations:

@@ -1,0 +1,84 @@
+
+/* <!-- main menu --> */
+.main-container{
+    margin-top: 100px;
+}
+.category-button-group{
+    padding-bottom: 10px;
+}
+.category-button-group button{
+    width: 100px;
+}
+.menu-input-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+    font-size: 15px;
+}
+.main-menu-content{
+    padding-left: 5vw;
+    margin-bottom: 15%;
+
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+}
+.main-menu-content ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.main-menu-drink-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px 0px 20px;
+    margin: 10px 5px 0px;
+}
+.main-menu-drink-img img{
+    width: 35vh;
+}
+.main-menu-drink-name{
+    margin-top: 10px;
+    font-size: 12px;
+}
+.modify-button{
+    width: 70px;
+    margin-top: 30px;
+
+    background-color: #243c84;
+
+    color: white;
+    font-weight: 600;
+}
+.delete-button{
+    width: 70px;
+    margin-top: 30px;
+
+    font-weight: 600;
+}
+/* 마지막상자 */
+.last-box{
+    width: 35vh;
+    height: 60vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px 0px 20px;
+    margin: 10px 5px 0px;
+}
+.last-box button{
+    width: 50px;
+    height: 50px;
+    border-color: rgba(0, 0, 0, 0.500);
+    border-radius: 50px;
+
+    font-size: 30px;
+}

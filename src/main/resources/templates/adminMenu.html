@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/static/css/common.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/adminMenu.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/adminMenuPopup.css">
+  <title>passorder</title>
+</head>
+<body>
+  <div id="container">
+    <header class="header-container">
+        <div class="sns-container">
+            <button class="sns-button" disabled>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </button>
+        </div>
+        <div class="logo-container">
+            <h1 class="brand-logo"><a href="">PASSORDER</a></h1>
+        </div>
+        <ul class="menu-container">
+            <li><a href="">카페메뉴</a></li>
+            <li><a href="">마이페이지</a></li>
+            <li><a href="">장바구니</a></li>
+        </ul>
+    </header>
+
+    
+    <main class="main-container">
+
+      <div class="menu-input-title"><h1>메뉴 입력</h1></div>
+      <div class="category-button-group">
+        <button type="button" class="category-button">coffee</button>
+        <button type="button" class="category-button">tea</button>
+        <button type="button" class="category-button">beverage</button>
+        <button type="button" class="category-button">bakery</button>
+      </div>
+
+      <!-- main menu -->
+      <div class="main-menu-container">
+        <div class="main-menu-content">
+          <ul>
+            <li class="main-menu-drink-box">
+              <div class="main-menu-drink-img"><img src="/static/images/음료1.PNG" alt=""></div>
+              <div class="main-menu-drink-name"><p>HOT 생딸기 블루밍 그린티</p></div>
+              <div class="main-menu-button-group">
+                <button type="button" class="modify-button">수정</button>
+                <button type="button" class="delete-button">삭제</button>
+              </div>
+            </li>
+            <li class="main-menu-drink-box">
+              <div class="main-menu-drink-img"><img src="/static/images/음료1.PNG" alt=""></div>
+              <div class="main-menu-drink-name"><p>HOT 생딸기 블루밍 그린티</p></div>
+              <div class="main-menu-button-group">
+                <button type="button" class="modify-button">수정</button>
+                <button type="button" class="delete-button">삭제</button>
+              </div>
+            </li>
+            <li class="main-menu-drink-box">
+              <div class="main-menu-drink-img"><img src="/static/images/음료1.PNG" alt=""></div>
+              <div class="main-menu-drink-name"><p>HOT 생딸기 블루밍 그린티</p></div>
+              <div class="main-menu-button-group">
+                <button type="button" class="modify-button">수정</button>
+                <button type="button" class="delete-button">삭제</button>
+              </div>
+            </li>
+            <li class="main-menu-drink-box">
+              <div class="main-menu-drink-img"><img src="/static/images/음료1.PNG" alt=""></div>
+              <div class="main-menu-drink-name"><p>HOT 생딸기 블루밍 그린티</p></div>
+              <div class="main-menu-button-group">
+                <button type="button" class="modify-button">수정</button>
+                <button type="button" class="delete-button">삭제</button>
+              </div>
+            </li>
+            <li class="main-menu-drink-box">
+              <div class="main-menu-drink-img"><img src="/static/images/음료1.PNG" alt=""></div>
+              <div class="main-menu-drink-name"><p>HOT 생딸기 블루밍 그린티</p></div>
+              <div class="main-menu-button-group">
+                <button type="button" class="modify-button">수정</button>
+                <button type="button" class="delete-button">삭제</button>
+              </div>
+            </li>
+
+            <li class="last-box">
+              <button type="button" class="add-drink-button">+</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+  <div class="popup-container"> 
+    <div class="popup-wrap" id="popup">
+      <div class="popup">
+        <div class="popup-head">
+            <span class="head-title">메뉴 등록</span>
+        </div>
+        <div class="popup-body">
+          <div class="body-content">
+            <div class="body-titlebox">
+              <p>메뉴명</p>
+              <input type="text" name="title" class="title-box" placeholder="">
+            </div>
+            <div class="body-contentbox">
+              <div class="image-container">
+                <img src="/static/images/음료1.PNG" alt="">
+                <input type="image" hidden>
+                <div class="image-button-group">
+                  <button type="button" class="img-button delete">삭제</button>
+                  <button type="button" class="img-button modify">수정</button>
+                </div>
+              </div>
+              <div class="option-container">
+                <ul>
+                  <li class="option-list">
+                    <p class="option-name">상태</p>
+                    <input type="checkbox" name="status" class="option-checkbox">
+                    <div class="option-content">
+                      <div class="option-button-group">
+                        <button type="button" class="none-button">없음</button>
+                        <button type="button" class="add-button">추가</button>
+                      </div>
+                      <input type="text" name="price" class="option-price" placeholder="가격을 입력하세요">
+                    </div>
+                  </li>
+                  <li class="option-list">
+                    <p class="option-name">상태</p>
+                    <input type="checkbox" name="status" class="option-checkbox">
+                    <div class="option-content">
+                      <div class="option-button-group">
+                        <button type="button" class="none-button">없음</button>
+                        <button type="button" class="add-button">추가</button>
+                      </div>
+                      <input type="text" name="price" class="option-price" placeholder="가격을 입력하세요">
+                    </div>
+                  </li>
+                  <li class="option-list">
+                    <p class="option-name">상태</p>
+                    <input type="checkbox" name="status" class="option-checkbox">
+                    <div class="option-content">
+                      <div class="option-button-group">
+                        <button type="button" class="none-button">없음</button>
+                        <button type="button" class="add-button">추가</button>
+                      </div>
+                      <input type="text" name="price" class="option-price" placeholder="가격을 입력하세요">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup-foot"> 
+          <span class="pop-btn close" id="confirm">취소</span>
+          <span class="pop-btn save" id="close">저장</span>
+        </div>
+      </div>
+     </div>
+  </div>
+    
+
+
+  </div>
+</body>
+</html>

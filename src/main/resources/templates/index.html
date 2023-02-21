@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패스오더</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="/static/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css" />
+</head>
+
+<body>
+    <div id="container">
+        <header class="header-container">
+            
+        </header>
+    
+        
+        <main class="main-container">
+            
+            <div class="main-contents-area">
+                <div class="main-title-container">
+                    <span>ALWAYS BESIDE YOU, PASSORDER</span>
+                    <h1>늘 당신 곁에, 패스오더의 다양한 메뉴를 맛보세요.</h1>
+                </div>
+                <div class="main-menu-button">
+                    <button class="menu-button">메뉴 보기</button>
+                </div>
+            </div>
+
+            <aside class="main-account-container">
+                <form action="/index" method="post">
+                    <div class="login-container">
+                        <h1 class="login-title">PASSORDER 로그인</h1>
+                        <div class="login-group">
+                            <label for="login-email"></label>
+                            <input type="email" id="login-email" class="login-inputs" name="username" placeholder="이메일을 입력해주세요" requried>
+                        </div>
+                        <div class="login-group">
+                            <label for="login-password"></label>
+                            <input type="password" id="login-password" class="login-inputs" name="password" placeholder="비밀번호를 입력하세요" requried>
+                        </div>
+                        <div class="login-error">
+                            사용자 정보를 다시 확인하세요.
+                        </div>
+                        <div class="button-group">
+                          <button type="submit" class="login-submit">로그인</button>
+                          <button type="button" class="naver-login">네이버 로그인</button>
+                        </div>
+                        <div class="button-group-footer">
+                            <button type="button" class="footer-button register-button"  onclick="location.href ='/account/before-register'" >회원가입</button>
+                            <button type="button" class="footer-button search-email">이메일 찾기</button>
+                            <button type="button" class="footer-button search-password">비밀번호 찾기</button>
+                        </div>
+                    </div>
+                </form>
+            </aside>
+        </main>
+    </div>
+    <script src="/static/js/component/header.js"></script>
+    <!-- <script src="/static/js/index.js"></script> -->
+</body>
+
+</html>
