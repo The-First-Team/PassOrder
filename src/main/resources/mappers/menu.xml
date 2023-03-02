@@ -5,7 +5,6 @@
 <mapper namespace="com.korit.passorder.respository.MenuRepository">
 
 
-
     <insert id="createMenu" parameterType="com.korit.passorder.entity.MenuMst">
         insert into menuMst
         values (0, #{cafeId}, #{menuName}, #{category}, #{menuPrice}, #{addMenu})
@@ -60,8 +59,6 @@
 <!--            category = #{category}-->
 <!--            menu_price = #{menuPrice}-->
 <!--            add_menu = #{addMenu}-->
-
-
 
 <!--    </update>-->
 

@@ -82,14 +82,14 @@ public class AccountApi {
     }
 
     @ApiOperation(value = "Get Principal", notes = "로그인 된 사용자 정보 가져오기")
-    @GetMapping("/principal")
-    public ResponseEntity<CMRespDto<? extends PrincipalDetails>> getUserByPrincipalDetails(@ApiParam(name = "principalDetails", hidden = true) @AuthenticationPrincipal PrincipalDetails principalDetails){
-        if(principalDetails != null) {
-            principalDetails.getAuthorities().forEach(role -> {
-                System.out.println(role);
-                log.info("로그인 된 사용자의 권한: {}", role.getAuthority());
-            });
-        }
+        @GetMapping("/principal")
+        public ResponseEntity<CMRespDto<? extends PrincipalDetails>> getUserByPrincipalDetails(@ApiParam(name = "principalDetails", hidden = true) @AuthenticationPrincipal PrincipalDetails principalDetails){
+            if(principalDetails != null) {
+                principalDetails.getAuthorities().forEach(role -> {
+                    System.out.println(role);
+                    log.info("로그인 된 사용자의 권한: {}", role.getAuthority());
+                });
+            }
 
 
         return ResponseEntity

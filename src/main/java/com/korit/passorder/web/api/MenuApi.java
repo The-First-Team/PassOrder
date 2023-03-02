@@ -2,13 +2,15 @@ package com.korit.passorder.web.api;
 
 import com.korit.passorder.entity.MenuDtl;
 import com.korit.passorder.entity.MenuMst;
+import com.korit.passorder.security.PrincipalDetails;
 import com.korit.passorder.service.MenuService;
 import com.korit.passorder.web.dto.CMRespDto;
+import com.korit.passorder.web.dto.MenuReqDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import java.util.List;
 
@@ -19,16 +21,32 @@ public class MenuApi {
     @Autowired
     MenuService menuService;
 
-    @PostMapping()
-    public ResponseEntity<?> createMenu(@RequestBody MenuMst menuMst){
-        menuService.createMenu(menuMst);
-        return  ResponseEntity.created(null).body(new CMRespDto<>(HttpStatus.CREATED.value(), "ok", menuMst));
-    }
+
+//    @PostMapping()
+//    public ResponseEntity<?> createMenu(@RequestBody MenuMst menuMst){
+//        menuService.createMenu(menuMst);
+//        return  ResponseEntity.created(null).body(new CMRespDto<>(HttpStatus.CREATED.value(), "ok", menuMst));
+//    }
 
     @PostMapping()
-    public ResponseEntity<?> createAddMenu(@RequestBody MenuDtl menuDtl){
-        menuService.createMenu(MenuDtl);
-        return  ResponseEntity.created(null).body(new CMRespDto<>(HttpStatus.CREATED.value(), "ok", menuMst));
+    public ResponseEntity<?> createAddMenu(@RequestBody MenuReqDto menuReqDto, @AuthenticationPrincipal PrincipalDetails principal){
+        int userId = principal.getUser().getUserId();
+//        menuReqDto.setCafeId(cafeService.getCafeIdByUserId(userId));
+        int cafeId = 26; // 임시 카페 id
+        MenuMst menuMst = MenuMst.builder()
+                        .cafeId(cafeId)
+                        .menuName(menuReqDto.getMenuName())
+                        .category(menuReqDto.getCategory())
+                        .menuPrice(menuReqDto.getMenuPrice())
+                .build();
+        menuService.createMenu(menuMst);
+
+        List<MenuDtl> menuDtl = menuReqDto.getMenuDtl();
+        for(MenuDtl dtl : menuDtl){
+            menuService.createAddMenu(dtl);
+        }
+
+        return  ResponseEntity.created(null).body(new CMRespDto<>(HttpStatus.CREATED.value(), "ok", menuReqDto));
     }
 
     @GetMapping("/menuId/{menuId}")
