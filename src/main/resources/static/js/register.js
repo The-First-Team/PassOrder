@@ -14,6 +14,7 @@ class RegisterApi {
     }
 
     register(user) {
+        let responseData = null;
         $.ajax({
             async: false,
             type: "post",
@@ -23,14 +24,22 @@ class RegisterApi {
             dataType: "json",
             success: response => {
                 console.log(response);
+                alert("회원가입 완료. 로그인 페이지로 이동합니다.");
+                location.replace("/index");
+                responseData = response.data;
             },
             error: error => {
                 console.log(error);
                 RegisterService.getInstance().setErrorMessage(error.responseJSON.data);
             }
         });
+
+        return responseData;
     }
-    registerAdmin(cafe) {
+
+    
+
+    registerCafe(cafe) {
         $.ajax({
             async: false,
             type: "post",
@@ -43,7 +52,7 @@ class RegisterApi {
             },
             error: error => {
                 console.log(error);
-                // RegisterService.getInstance().setErrorMessage(error.responseJSON.data);
+                RegisterService.getInstance().setErrorMessage(error.responseJSON.data);
             }
         });
     }
@@ -61,8 +70,10 @@ class RegisterService {
 
     setErrorMessage(errors) {
         const registerError = document.querySelectorAll(".register-error");
+        const adminError = document.querySelectorAll(".admin-error");
 
         this.#clearErrorMessage();
+        this.#clearAdminErrorMessage();
 
         Object.keys(errors).forEach(error => {
             if(error == "username") {
@@ -75,6 +86,12 @@ class RegisterService {
                 registerError[3].textContent = errors[error];
             } else if(error == "email") {
                 registerError[4].textContent = errors[error];
+            } else if(error == "cafeName") {
+                adminError[0].textContent = errors[error];
+            } else if (error == "address") {
+                adminError[1].textContent = errors[error];
+            } else if (error == "phone") {
+                adminError[2].textContent = errors[error];
             }
         });
     }
@@ -82,6 +99,13 @@ class RegisterService {
     #clearErrorMessage() {
         const registerError = document.querySelectorAll(".register-error");
         registerError.forEach(error => {
+            error.textContent = "";
+        });
+    }
+
+    #clearAdminErrorMessage() {
+        const adminError = document.querySelectorAll(".admin-error");
+        adminError.forEach(error => {
             error.textContent = "";
         });
     }
@@ -111,9 +135,8 @@ class RegisterEvent {
             const passwordValue = document.querySelectorAll(".register-inputs")[2].value;
             const repasswordValue = document.querySelectorAll(".register-inputs")[3].value;
             const emailValue = document.querySelectorAll(".register-inputs")[4].value;
-            const cafeNameValue = document.querySelectorAll(".register-inputs")[5].value;
-            const cafeAddress = document.querySelectorAll(".register-inputs")[6].value;
-            const cafePhone = document.querySelectorAll(".register-inputs")[7].value;
+
+            
             
             let user = null;
             let cafe = null;
@@ -123,9 +146,15 @@ class RegisterEvent {
               RegisterApi.getInstance().register(user);
             } else {
               user = new User(usernameValue, nameValue, passwordValue, repasswordValue, emailValue, 1);
-              cafe = new Cafe(cafeNameValue, cafeAddress, cafePhone);
-              RegisterApi.getInstance().register(user);
-              RegisterApi.getInstance().registerAdmin(cafe);
+              
+              const registerAdmin = RegisterApi.getInstance().register(user);
+              
+              const cafeNameValue = document.querySelectorAll(".admin-register-inputs")[0].value;
+              const cafeAddressValue = document.querySelectorAll(".admin-register-inputs")[1].value;
+              const cafePhoneValue = document.querySelectorAll(".admin-register-inputs")[2].value;
+
+              cafe = new Cafe(cafeNameValue, cafeAddressValue, cafePhoneValue, registerAdmin.userId);
+              RegisterApi.getInstance().registerCafe(cafe);
             }
             
 
@@ -139,6 +168,9 @@ class RegisterEvent {
 
         registerUser.onclick = () => {
             const registerUserContainer = document.querySelector('.register-container');
+
+            const userRoleValue = registerUser.value = '2';
+            console.log(userRoleValue);
             
             registerUserContainer.innerHTML = `
             <h1 class="register-title">회원 정보 입력</h1>
@@ -208,6 +240,8 @@ class RegisterEvent {
 
 
 
+
+
             registerAdminContainer.innerHTML = `
             <h1 class="register-title">회원 정보 입력</h1>
             <div class="register-content">
@@ -264,22 +298,24 @@ class RegisterEvent {
                 <div class="register-group">
                   <label for="register-strorename">지점명</label>
                   <div class="input-group">
-                    <input type="text" id="register-strorename" name="cafeName" class="register-inputs" />
-                    <div class="register-error"></div>
+                    <input type="text" id="register-strorename" name="cafeName" class="admin-register-inputs" />
+                    <div class="admin-error"></div>
                   </div>
                 </div>
     
                 <div class="register-group">
                   <label for="register-address">주소</label>
                   <div class="input-group">
-                    <input type="address" id="register-address" name="address" class="register-inputs" />
+                    <input type="address" id="register-address" name="address" class="admin-register-inputs" />
+                    <div class="admin-error"></div>
                   </div>
                 </div>               
     
                 <div class="register-group">
                   <label for="register-tel">전화번호</label>
                   <div class="input-group">
-                    <input type="tel" id="register-tel" name="phone" class="register-inputs" />
+                    <input type="tel" id="register-tel" name="phone" class="admin-register-inputs" />
+                    <div class="admin-error"></div>
                   </div>
                 </div>
               </div>
@@ -312,15 +348,17 @@ class User {
 }
 
 class Cafe {
-    cafename = null;
+    cafeName = null;
     address = null;
     phone = null;
+    userId = null;
 
 
-    constructor(cafename, address, phone) {
-      this.cafename = cafename;
+    constructor(cafeName, address, phone, userId) {
+      this.cafeName = cafeName;
       this.address = address;
       this.phone = phone;
+      this.userId = userId;
   }
 }
 

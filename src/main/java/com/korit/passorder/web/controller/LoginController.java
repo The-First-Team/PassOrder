@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class LoginController {
 
 
-    @GetMapping("/success")
-    public String success(){
-        return "/index/indexSuccess";
-    }
-
-    //fail 시
-    @ResponseBody
-    @GetMapping("/fail")
-    public String fail(){
-        return "fail";
-    }
+//    @GetMapping("/success")
+//    public String success(){
+//        return "/index/indexSuccess";
+//    }
+//
+//    //fail 시
+//    @ResponseBody
+//    @GetMapping("/fail")
+//    public String fail(){
+//        return "fail";
+//    }
 }

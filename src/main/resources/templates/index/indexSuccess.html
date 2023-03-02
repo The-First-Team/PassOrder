@@ -22,7 +22,21 @@
 <body>
     <div id="container">
         <header class="header-container">
-            
+            <div class="sns-container">
+                <button class="sns-button" disabled>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </button>
+              </div>
+              <div class="logo-container">
+                  <h1 class="brand-logo"><a href="javascript:void(0);" class="logo-button">PASSORDER</a></h1>
+              </div>
+              <ul class="menu-container">
+                  <li><a href="javascript:void(0);" class="menu-container-nav">카페메뉴</a></li>
+                  <li><a href="javascript:void(0);" class="menu-container-nav">마이페이지</a></li>
+                  <li><a href="javascript:void(0);" class="menu-container-nav">장바구니</a></li>
+              </ul>
         </header>
     
         
@@ -39,24 +53,23 @@
             </div>
 
             <aside class="login-success-container">
-                <form action="" method="">
+                <form action="/index" method="get">
                     <div class="login-success-box">
                         <h1 class="login-success-title">PASSORDER</h1>
                         <div class="login-success-group">
-                            <p>박창우님<br>PASSORDER에 오신 걸 환영합니다.</p>
+                            <p class="welcome">박창우님<br>PASSORDER에 오신 걸 환영합니다.</p>
                         </div>
                         
                         <div class="success-button-group">
                           <button type="button" class="mypage-button">마이페이지</button>
-                          <button type="button" class="logout-button">로그아웃</button>
+                          <button type="button" class="logout-button" onclick="location.href='/index'">로그아웃</button>
                         </div>
                     </div>
                 </form>
             </aside>
         </main>
     </div>
-    <script src="/static/js/component/header.js"></script>
-    <script src="/static/js/index.js"></script>
+    <script src="/static/js/indexSuccess.js"></script>
 </body>
 
 </html>

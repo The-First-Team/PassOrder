@@ -25,6 +25,12 @@ public class MenuApi {
         return  ResponseEntity.created(null).body(new CMRespDto<>(HttpStatus.CREATED.value(), "ok", menuMst));
     }
 
+    @PostMapping()
+    public ResponseEntity<?> createAddMenu(@RequestBody MenuDtl menuDtl){
+        menuService.createMenu(MenuDtl);
+        return  ResponseEntity.created(null).body(new CMRespDto<>(HttpStatus.CREATED.value(), "ok", menuMst));
+    }
+
     @GetMapping("/menuId/{menuId}")
     public ResponseEntity<?> getMenuByMenuId(@PathVariable int menuId){
         MenuMst menuMst = menuService.getMenuByMenuId(menuId);

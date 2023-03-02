@@ -8,22 +8,10 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/account")
 public class AccountController {
 
-    @GetMapping("/index")
-    public String login(){
-        return "/index/index";
-    }
-
-    @GetMapping("/before-register")
-    public String beforeRegister() {
-        return "/register/beforeRegister";
-    }
-
     @GetMapping("/register")
     public String register(){
-        return "/register/register";
+        return "register/register";
     }
-
-
 
 
 

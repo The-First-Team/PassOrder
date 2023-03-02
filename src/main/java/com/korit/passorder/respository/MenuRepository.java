@@ -16,6 +16,10 @@ public interface MenuRepository {
 
     //menuDTl get
     public List<MenuDtl> getAddMenu(int menuId);
+    public int createAddMenu(MenuDtl menuDtl);
+
+
+
 
 
 

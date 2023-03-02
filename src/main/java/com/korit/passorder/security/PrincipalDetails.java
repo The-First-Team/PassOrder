@@ -31,6 +31,7 @@ public class PrincipalDetails implements UserDetails, OAuth2User {
         ArrayList<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
 
         String roleName = user.getRoleName();
+        System.out.println("롤 네임: " + roleName);
 
         GrantedAuthority role = new GrantedAuthority() {
             @Override
@@ -40,6 +41,7 @@ public class PrincipalDetails implements UserDetails, OAuth2User {
         };
 
         authorities.add(role);
+
 
         return authorities;
     }
@@ -54,9 +56,14 @@ public class PrincipalDetails implements UserDetails, OAuth2User {
         return user.getUsername();
     }
 
+    @Override
+    public <A> A getAttribute(String name) {
+        return OAuth2User.super.getAttribute(name);
+    }
+
     /*
-        계정 만료 여부
-     */
+            계정 만료 여부
+         */
     @Override
     public boolean isAccountNonExpired() {
         return true;
@@ -88,13 +95,12 @@ public class PrincipalDetails implements UserDetails, OAuth2User {
         return user.getName();
     }
 
-    @Bean
-    public int getUserId(){
-        return user.getUserId();
-    }
-
     @Override
     public Map<String, Object> getAttributes() {
         return response;
+    }
+
+    public UserMst getUser() {
+        return this.user;
     }
 }

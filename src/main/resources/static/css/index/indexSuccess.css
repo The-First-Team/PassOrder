@@ -110,6 +110,8 @@ body {
     height: 250px;
 
     background-color: rgb(255, 255, 255, 0.5);
+
+    padding-top: 30px;
 }
 
 .login-success-group p {
@@ -119,7 +121,6 @@ body {
 
     line-height: 40px;
 
-    padding-top: 30px;
 
     font-weight: 600;
 }

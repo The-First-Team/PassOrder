@@ -3,6 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.korit.passorder.respository.MenuRepository">
+
+
+
     <insert id="createMenu" parameterType="com.korit.passorder.entity.MenuMst">
         insert into menuMst
         values (0, #{cafeId}, #{menuName}, #{category}, #{menuPrice}, #{addMenu})
@@ -15,7 +18,6 @@
             menu_name as menuName,
             category,
             menu_price as menuPrice,
-            add_menu as addMenu
         from
             menuMst
         where
@@ -29,7 +31,6 @@
             menu_name as menuName,
             category,
             menu_price as menuPrice,
-            add_menu as addMenu
         from
             menuMst
         where
@@ -43,7 +44,6 @@
             menu_name as menuName,
             category,
             menu_price as menuPrice,
-            add_menu as addMenu
         from
             menuMst
         where
@@ -68,14 +68,20 @@
 <!--    menuDtl-->
     <select id="getAddMenu" resultType="com.korit.passorder.entity.MenuDtl">
         select
-            menu_dtl_id as menuDtlId,
-            add_menu_name as addMenuName,
-            add_price as addPrice
+            dtl.menu_dtl_id as menuDtlId,
+            nameDtl.add_menu_name as addMenuName,
+            dtl.add_price as addPrice
         from
-            menuDtl
+            menuDtl dtl join addMenuNameDtl nameDtl on nameDtl.add_menu_name_id = dtl.add_menu_name_id
         where
-            menu_id = #{menuId}
+            dtl.menu_id = #{menuId}
     </select>
+
+
+    <insert id="createAddMenu" parameterType="com.korit.passorder.entity.MenuMst">
+        insert into menuMst
+        values (0, #{addPrice}, #{menuId}, #{addMenuNameId})
+    </insert>
 
 
 </mapper>

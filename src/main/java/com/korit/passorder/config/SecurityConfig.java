@@ -37,10 +37,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
                 .formLogin()
-                .loginPage("/account/index") // 로그인 페이지 get요청
-                .loginProcessingUrl("/login") // 로그인 인증 post 요청
-                .defaultSuccessUrl("/success")
-                .failureUrl("/fail");
+                .loginPage("/index") // 로그인 페이지 get요청
+                .loginProcessingUrl("/index") // 로그인 인증 post 요청
+                .defaultSuccessUrl("/login-success")
+                .failureUrl("/login-fail");
 
     }
 

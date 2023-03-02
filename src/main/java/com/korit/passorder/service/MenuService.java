@@ -45,4 +45,8 @@ public class MenuService {
         return menuDtlList;
     }
 
+    public int createAddMenu(MenuDtl menuDtl){
+        return menuRepository.createAddMenu(menuDtl);
+    }
+
 }
