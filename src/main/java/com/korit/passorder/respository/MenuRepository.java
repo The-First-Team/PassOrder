@@ -1,6 +1,5 @@
 package com.korit.passorder.respository;
 
-import com.korit.passorder.entity.MenuDtl;
 import com.korit.passorder.entity.MenuMst;
 import org.apache.ibatis.annotations.Mapper;
 
