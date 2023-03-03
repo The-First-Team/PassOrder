@@ -32,4 +32,6 @@ public class MenuService {
     public int modifyMenu(MenuMst modifiedMenu){
         return menuRepository.modifyMenu(modifiedMenu);
     };
+
 }
+

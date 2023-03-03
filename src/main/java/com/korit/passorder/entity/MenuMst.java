@@ -21,4 +21,5 @@ public class MenuMst {
 
     private List<MenuDtl> menuDtlList;
 
+
 }
