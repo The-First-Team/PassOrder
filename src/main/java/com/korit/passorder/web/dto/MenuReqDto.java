@@ -1,5 +1,6 @@
 package com.korit.passorder.web.dto;
 
+import com.korit.passorder.entity.MenuDtl;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
