@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class MenuDtl {
-
     private int menuDtlId;
     private String addMenuName;
     private int addPrice;
