@@ -20,3 +20,5 @@ public class MenuMst {
     private int menuPrice;
 
     private List<MenuDtl> menuDtlList;
+
+}
