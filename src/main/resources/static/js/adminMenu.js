@@ -6,39 +6,39 @@ window.onload = () => {
 
 }
 
-// class RegisterApi {
-//     static #instance = null;
-//     static getInstance() {
-//         if(this.#instance == null) {
-//             this.#instance = new RegisterService();
-//         }
+class RegisterApi {
+    static #instance = null;
+    static getInstance() {
+        if(this.#instance == null) {
+            this.#instance = new RegisterApi();
+        }
 
-//         return this.#instance;
-//     }
+        return this.#instance;
+    }
 
 
-//     registerMenu(menu){
-//         let responseData = null;
-//         $.ajax({
-//             async: false,
-//             type: "post",
-//             url: "/api/menu",
-//             data: JSON.stringify(menu),
-//             dataType: "json",
-//             success: response => {
-//                 console.log(response);
-//                 alert("메뉴 등록 완료. 메뉴 페이지로 이동합니다.");
-//                 location.replace("/menu/admin");
-//                 responseData = response.data;
-//             },
-//             error: error => {
-//                 console.log(error);
-//                 RegisterService.getInstance().setErrorMessage(error.responseJSON.data);
-//             }
-//         });
-//         return responseData;
-//     }
-// }
+    registerMenu(menu){
+        let responseData = null;
+        $.ajax({
+            async: false,
+            type: "post",
+            url: "/api/menu/cre",
+            data: JSON.stringify(menu),
+            dataType: "json",
+            success: response => {
+                console.log(response);
+                alert("메뉴 등록 완료. 메뉴 페이지로 이동합니다.");
+                location.replace("/menu/admin");
+                responseData = response.data;
+            },
+            error: error => {
+                console.log(error);
+                RegisterService.getInstance().setErrorMessage(error.responseJSON.data);
+            }
+        });
+        return responseData;
+    }
+}
 
 
 //errors
@@ -83,7 +83,7 @@ class RegisterEvent {
 
             menu = new Menu(menuName, hotAndice, shotStatus, whipStatus, hotAndicePrice, shotPrice, whipPrice);
             alert(JSON.stringify(menu));
-            // RegisterApi.getInstance().registerMenu(menu);
+            RegisterApi.getInstance().registerMenu(menu);
         }
     }
 

@@ -23,13 +23,14 @@ public class MenuApi {
     MenuService menuService;
 
 
+
 //    @PostMapping()
 //    public ResponseEntity<?> createMenu(@RequestBody MenuMst menuMst){
 //        menuService.createMenu(menuMst);
 //        return  ResponseEntity.created(null).body(new CMRespDto<>(HttpStatus.CREATED.value(), "ok", menuMst));
 //    }
 
-    @PostMapping()
+    @PostMapping("")
     public ResponseEntity<?> createAddMenu(@RequestBody MenuReqDto menuReqDto){
         System.out.println(menuReqDto.toString());
 //        int userId = principal.getUser().getUserId();
