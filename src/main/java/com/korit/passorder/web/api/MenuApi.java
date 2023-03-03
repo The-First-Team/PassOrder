@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.SQLOutput;
 import java.util.List;
 
 @RestController
@@ -29,22 +30,23 @@ public class MenuApi {
 //    }
 
     @PostMapping()
-    public ResponseEntity<?> createAddMenu(@RequestBody MenuReqDto menuReqDto, @AuthenticationPrincipal PrincipalDetails principal){
-        int userId = principal.getUser().getUserId();
+    public ResponseEntity<?> createAddMenu(@RequestBody MenuReqDto menuReqDto){
+        System.out.println(menuReqDto.toString());
+//        int userId = principal.getUser().getUserId();
 //        menuReqDto.setCafeId(cafeService.getCafeIdByUserId(userId));
-        int cafeId = 26; // 임시 카페 id
-        MenuMst menuMst = MenuMst.builder()
-                        .cafeId(cafeId)
-                        .menuName(menuReqDto.getMenuName())
-                        .category(menuReqDto.getCategory())
-                        .menuPrice(menuReqDto.getMenuPrice())
-                .build();
-        menuService.createMenu(menuMst);
-
-        List<MenuDtl> menuDtl = menuReqDto.getMenuDtl();
-        for(MenuDtl dtl : menuDtl){
-            menuService.createAddMenu(dtl);
-        }
+//        int cafeId = 26; // 임시 카페 id
+//        MenuMst menuMst = MenuMst.builder()
+//                        .cafeId(cafeId)
+//                        .menuName(menuReqDto.getMenuName())
+//                        .category(menuReqDto.getCategory())
+//                        .menuPrice(menuReqDto.getMenuPrice())
+//                .build();
+//        menuService.createMenu(menuMst);
+//
+//        List<MenuDtl> menuDtl = menuReqDto.getMenuDtl();
+//        for(MenuDtl dtl : menuDtl){
+//            menuService.createAddMenu(dtl);
+//        }
 
         return  ResponseEntity.created(null).body(new CMRespDto<>(HttpStatus.CREATED.value(), "ok", menuReqDto));
     }

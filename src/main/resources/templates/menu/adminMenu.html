@@ -166,9 +166,9 @@
                     </div>
                     <div class="menu-button-input">
                       <div class="menu-button-area">
-                        <input type="radio" id="hot-radio" name="hotAndice">
+                        <input type="radio" id="hot-radio" name="hotAndice" value="hot">
                         <label for="hot-radio" class="status-button hot-button">HOT</label>
-                        <input type="radio" id="ice-radio" name="hotAndice">
+                        <input type="radio" id="ice-radio" name="hotAndice" value="ice">
                         <label for="ice-radio" class="status-button ice-button">ICE</label>
                       </div>
                       <div class="menu-input-area">
@@ -184,9 +184,9 @@
                     </div>
                     <div class="menu-button-input">
                       <div class="menu-button-area">
-                        <input type="radio" id="shot-none-radio" name="shotStatus">
+                        <input type="radio" id="shot-none-radio" name="shotStatus" value=false>
                         <label for="shot-none-radio" class="shot-button shot-none-button">없음</label>
-                        <input type="radio" id="shot-add-radio" name="shotStatus">
+                        <input type="radio" id="shot-add-radio" name="shotStatus" value="true">
                         <label for="shot-add-radio" class="shot-button shot-add-button">추가</label>
                       </div>
                       <div class="menu-input-area">
@@ -202,9 +202,9 @@
                     </div>
                     <div class="menu-button-input">
                       <div class="menu-button-area">
-                        <input type="radio" id="whip-none-radio" name="whipStatus">
+                        <input type="radio" id="whip-none-radio" name="whipStatus" value=false>
                         <label for="whip-none-radio" class="whip-button whip-none-button">없음</label>
-                        <input type="radio" id="whip-add-radio" name="whipStatus">
+                        <input type="radio" id="whip-add-radio" name="whipStatus" value=fals>
                         <label for="whip-add-radio" class="whip-button whip-add-button">추가</label>
                       </div>
                       <div class="menu-input-area">
@@ -226,6 +226,7 @@
      </div>
     </div>
   </div>
+  <script src="/static/js/adminMenu.js"></script>
   <script type="text/javascript"> 
     var popupContainer = document.querySelector(".popup-container"); 
     var circleTrigger = document.querySelector(".fa-circle-plus"); 

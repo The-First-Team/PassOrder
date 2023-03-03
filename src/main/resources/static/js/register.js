@@ -177,9 +177,9 @@ class RegisterEvent {
               <div class="register-content">
 
                 <div class="register-group">
-                  <label for="register-username">아이디</label>
+                  <label for="register-username">아이디</label 
                   <div class="input-group">
-                       <input type="text" id="register-username" class="register-inputs" name="username"/>
+                       <input type="text" id="register-usernam " class="register-inputs" name="username"/>
                     
                     <div class="register-error"></div>
                   </div>
